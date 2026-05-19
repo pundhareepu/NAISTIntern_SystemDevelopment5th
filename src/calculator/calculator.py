@@ -2,16 +2,18 @@
 A simple calculator module with basic arithmetic operations.
 """
 
+
 class InvalidInputException(Exception):
     """Exception raised when input values are outside the valid range."""
+
     pass
 
 
 class Calculator:
     """Calculator class providing basic arithmetic operations."""
+
     MAX_VALUE = 1000000
     MIN_VALUE = -1000000
-
 
     def add(self, a, b):
         """Add two numbers.
@@ -92,10 +94,6 @@ class Calculator:
 
         for value in values:
             if value > self.MAX_VALUE or value < self.MIN_VALUE:
-                raise InvalidInputException(f"Input value {value} is outside the valid range {self.MIN_VALUE} to {self.MAX_VALUE}")
-
-
-
-
-
-
+                raise InvalidInputException(
+                    f"Input value {value} is outside the valid range {self.MIN_VALUE} to {self.MAX_VALUE}"
+                )

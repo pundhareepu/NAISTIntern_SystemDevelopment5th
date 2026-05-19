@@ -5,9 +5,11 @@ Test suite for the Calculator class.
 import pytest
 from calculator.calculator import Calculator, InvalidInputException
 
+
 @pytest.fixture
 def calc():
     return Calculator()
+
 
 class TestAddition:
     """Tests for the add method."""
@@ -50,7 +52,6 @@ class TestAddition:
 
         # Assert
         assert result == expected
-
 
     def test_add_negative_and_positive(self, calc):
         """Test adding negative and positive numbers."""
@@ -164,6 +165,7 @@ class TestAddition:
         expected = -999999
         result = calc.add(a, b)
         assert result == expected
+
 
 class TestSubtraction:
     """Tests for the subtract method."""
@@ -352,6 +354,7 @@ class TestSubtraction:
         result = calc.subtract(a, b)
         assert result == expected
 
+
 class TestMultiplication:
     """Tests for the multiply method."""
 
@@ -538,6 +541,7 @@ class TestMultiplication:
         result = calc.multiply(a, b)
         assert result == expected
 
+
 class TestDivision:
     """Tests for the divide method."""
 
@@ -715,4 +719,3 @@ class TestDivision:
         expected = -1000000
         result = calc.divide(a, b)
         assert result == expected
-
